@@ -1,0 +1,18 @@
+version: '3.3'
+services:
+  bot_manager: 
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: manager
+    restart: always
+    ports:
+      - 8080:8080
+  parser: 
+    build:
+      context: .\src\
+      dockerfile: Dockerfile
+    container_name: parser_main
+    restart: always
+    ports:
+      - 8079:8079

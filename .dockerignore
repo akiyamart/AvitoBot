@@ -1,0 +1,4 @@
+.gitignore
+venv
+# src/parser_main
+# src/Dockerfile
