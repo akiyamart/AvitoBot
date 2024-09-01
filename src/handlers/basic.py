@@ -157,8 +157,9 @@ async def top_up_user(query: CallbackQuery, callback_data: MyCallBack):
 @router.callback_query(MyCallBack.filter(F.foo == 'pay_bank'))
 async def top_up_user_bank(query: CallbackQuery, callback_data: MyCallBack):
     await query.message.edit_text(
-        "Оформить подписку\n\n7 дней - <b>599 RUB</b>\n14 дней - <b>999 RUB</b>\n30 дней - <b>1799 RUB</b>",
-        parse_mode='HTML', reply_markup=how_many_day_sub_banks)
+        text="Временно не работает 😓",
+        # "Оформить подписку\n\n7 дней - <b>599 RUB</b>\n14 дней - <b>999 RUB</b>\n30 дней - <b>1799 RUB</b>",
+        parse_mode='HTML', reply_markup=return_to_main_kb)
 
 
 # Для крипты
